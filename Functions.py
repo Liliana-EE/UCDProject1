@@ -23,10 +23,23 @@ def cleandata(filename):
     return cleaned_data
 
 #define joindata function
-def joindata (filename)
-    data = cleandata(filename)
-    #merge X and Y tables on "column name" called altered_data
-    altered_data = data.merge(filename,on="column")
-    #group the results by "column name" then count the number of elements
+def joindata (filename):
+    data1 = pd.read_csv(filename)
+    cleaned_df1 = cleandata(data1)
+    data2 = pd.read_csv(filename)
+    cleaned_df2 = cleandata(data2)
+    data3 = pd.read_csv(filename)
+    cleaned_df3 = cleandata(data3)
+    # compile the list of dataframes you want to merge
+    data_frames = [cleaned_df1, cleaned_df2, cleaned_df3]
+    #merge multiple tables based on different column names and call it altered_data
+    data_merged = cleaned_df1.merge(cleaned_df2,on=["Region","Sub region"]) \
+        .merge(cleaned_df3, on="sub region", suffixes=("_hou","_CN","_DInc"))
+    #group the results by "column name" and find the median value
+    Sub_region_median = data_merged.groupby("Sub region", as_index=False).agg([{"value":"median"}])
+    #sort group_median and print the results
+    sorted_group_median = group_median.sort_values(["_hou","_CN","_DIn"], ascending=[True,True,True])
+    #print the results
+    print(sorted_group_median.head())
 
 
