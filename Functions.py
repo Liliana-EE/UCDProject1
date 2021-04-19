@@ -9,7 +9,6 @@ def importdata(filename):
     print(data.info)
     return data
 
-
 #define cleandata function
 def cleandata(filename):
     # validate how many missing values are in the dataset
@@ -42,4 +41,12 @@ def joindata (filename):
     #print the results
     print(sorted_group_median.head())
 
+#Start the process by importind and cleaning datasets that will be used for the report
+#Import & clean Housing stock table
+importdata("Housing_in_Ireland_per_County.csv")
+cleandata("Housing_in_Ireland_per_County.csv")
+
+#Import & clean Commencement Notices table
+importdata("Commencement_Notices_per_County.csv")
+cleandata("Commencement_Notices_per_County.csv")
 
