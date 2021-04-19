@@ -1,27 +1,53 @@
-﻿County,Region,Sub-region,Aldi,Lidl
-Mayo,Northern & Western,West,4,4
-Carlow,Southern,South East,4,2
-Cavan,Northern & Western,Border,1,3
-Clare,Southern,Mid West,4,4
-Cork,Southern,South West,28,17
-Donegal,Northern & Western,Border,6,9
-Dublin,Eastern & Midland,Dublin,25,71
-Galway,Northern & Western,West,9,7
-Kerry,Southern,South West,7,8
-Kildare,Eastern & Midland,Mid East,8,7
-Kilkenny,Southern,South East,5,2
-Laois,Eastern & Midland,Midland,2,3
-Leitrim,Northern & Western,Border,1,1
-Limerick,Southern,Mid West,3,3
-Longford,Eastern & Midland,Midland,1,1
-Louth,Eastern & Midland,Mid East,4,
-Meath,Eastern & Midland,Mid East,7,2
-Monaghan,Northern & Western,Border,1,1
-Offaly,Eastern & Midland,Midland,1,3
-Roscommon,Northern & Western,West,1,1
-Sligo,Northern & Western,Border,1,2
-Tipperary,Southern,Mid West,8,8
-Waterford,Southern,South East,5,4
-Westmeath,Eastern & Midland,Midland,4,
-Wexford,Southern,South East,7,3
-Wicklow,Eastern & Midland,Mid East,4,3
+﻿County,Region,Sub-region,Retailer name,No. of stores
+Mayo,Northern & Western,West,Aldi,4
+Carlow,Southern,South East,Aldi,4
+Cavan,Northern & Western,Border,Aldi,1
+Clare,Southern,Mid West,Aldi,4
+Cork,Southern,South West,Aldi,28
+Donegal,Northern & Western,Border,Aldi,6
+Dublin,Eastern & Midland,Dublin,Aldi,25
+Galway,Northern & Western,West,Aldi,9
+Kerry,Southern,South West,Aldi,7
+Kildare,Eastern & Midland,Mid East,Aldi,8
+Kilkenny,Southern,South East,Aldi,5
+Laois,Eastern & Midland,Midland,Aldi,2
+Leitrim,Northern & Western,Border,Aldi,1
+Limerick,Southern,Mid West,Aldi,3
+Longford,Eastern & Midland,Midland,Aldi,1
+Louth,Eastern & Midland,Mid East,Aldi,4
+Meath,Eastern & Midland,Mid East,Aldi,7
+Monaghan,Northern & Western,Border,Aldi,1
+Offaly,Eastern & Midland,Midland,Aldi,1
+Roscommon,Northern & Western,West,Aldi,1
+Sligo,Northern & Western,Border,Aldi,1
+Tipperary,Southern,Mid West,Aldi,8
+Waterford,Southern,South East,Aldi,5
+Westmeath,Eastern & Midland,Midland,Aldi,4
+Wexford,Southern,South East,Aldi,7
+Wicklow,Eastern & Midland,Mid East,Aldi,4
+Mayo,Northern & Western,West,Lidl,4
+Carlow,Southern,South East,Lidl,2
+Cavan,Northern & Western,Border,Lidl,3
+Clare,Southern,Mid West,Lidl,4
+Cork,Southern,South West,Lidl,17
+Donegal,Northern & Western,Border,Lidl,9
+Dublin,Eastern & Midland,Dublin,Lidl,71
+Galway,Northern & Western,West,Lidl,7
+Kerry,Southern,South West,Lidl,8
+Kildare,Eastern & Midland,Mid East,Lidl,7
+Kilkenny,Southern,South East,Lidl,2
+Laois,Eastern & Midland,Midland,Lidl,3
+Leitrim,Northern & Western,Border,Lidl,1
+Limerick,Southern,Mid West,Lidl,3
+Longford,Eastern & Midland,Midland,Lidl,1
+Louth,Eastern & Midland,Mid East,Lidl,
+Meath,Eastern & Midland,Mid East,Lidl,2
+Monaghan,Northern & Western,Border,Lidl,1
+Offaly,Eastern & Midland,Midland,Lidl,3
+Roscommon,Northern & Western,West,Lidl,1
+Sligo,Northern & Western,Border,Lidl,2
+Tipperary,Southern,Mid West,Lidl,8
+Waterford,Southern,South East,Lidl,4
+Westmeath,Eastern & Midland,Midland,Lidl,
+Wexford,Southern,South East,Lidl,3
+Wicklow,Eastern & Midland,Mid East,Lidl,3
