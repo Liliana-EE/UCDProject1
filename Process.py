@@ -52,6 +52,9 @@ import pandas as pd
 # named "% Coverage_Opp" containing the difference between stores and population
 # by discounter criteria factor of 10,000
 
+#pop_subregion = pivot_table(pop, values=["Population No."], cols=["Subregion"], aggfunc=np.cumsum(), margins=True)
+#pop_subregion.stack("Subregion")
+
 
 # 5. Plot "% Coverage_Opp" and date by sub region
 # 5.1 Create a figure and plot Total Populations against the Year
