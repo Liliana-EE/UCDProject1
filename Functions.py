@@ -80,4 +80,30 @@ plt.show()
 #plt.show()
 
 
+#matplotlib inline
+import pandas as pd
+import matplotlib as mpl
+
+df = importdata("Housing_n_CN_YCol.csv")
+
+df.plot(y = ['2016','2017','2018','2017','2018'], x='Subregion')
+
+df.plot()
+plt.show()
+
+
+c_notices = importdata("Housing_Comm_Notices_1co.csv")
+
+# Display a scatter plot using color
+fig, ax = plt.subplots()
+plt.show()
+
+ax.scatter(c_notices["No. of households"], pop_stores["Stores"], c=pop_stores.index)
+
+# Set the x-axis label to "Population"
+ax.set_xlabel("Population")
+# Set the y-axis label to "Stores"
+ax.set_ylabel("Stores")
+
+plt.show()
 
