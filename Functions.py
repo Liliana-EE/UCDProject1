@@ -33,8 +33,14 @@ while offset != 0 :
       offset = offset + 1
     print(offset)
 
-#Get Total commer
-data = importdata("Housing_vs_Comm_Notices.csv")
-for lab, row in data.iterrows():
-    data.loc [lab, "Hous_CN_lengh"] = len(row["Region"])
-print(data)
+cleandata("Housing_vs_Comm_Notices.csv")
+cleandata("Stores_list_v2021.csv")
+
+# Merge the Housing_vs_Comm_Notices and store_list tables and taxi_veh tables
+hou_cn_df = cleandata("Housing_vs_Comm_Notices.csv")
+stores_df = cleandata("Stores_list_v2021.csv")
+hou_cn_stores = hou_cn_df.merge(stores_df, on="County")
+print(hou_cn_stores.head())
+
+# Print the column names of the taxi_own_veh
+print(hou_cn_stores.columns)
