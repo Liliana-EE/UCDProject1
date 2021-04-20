@@ -4,13 +4,16 @@ import pandas as pd
 
 
 # define importdata function
-def importdata(filename) -> object:
+def importdata(filename):
     data = pd.read_csv(filename)
     print(data.head())
     print(data.index)
     print(data.info)
-    return data
-
+    missing_values = data.isnull().sum
+    print(missing_values)
+    cleaned_data = data.fillna(method="bfill", axis=0).fillna(0)
+    print(cleaned_data)
+    return cleaned_data
 
 # define cleandata function
 def cleandata(filename):
@@ -35,5 +38,13 @@ while offset != 0 :
       offset = offset + 1
     print(offset)
 
-print(importdata("Pop_2016.csv").pop)
-print([pop["Subregion"]])
+
+
+pop= importdata("Pop_2016.csv")
+hous_cnot = importdata("Housing_vs_Comm_Notices.csv")
+stores = importdata("Stores_No..csv")
+
+
+pop_subregion = pivot_table(pop, values=["Population No."], cols=["Subregion"], aggfunc=np.cumsum(), margins=True)
+pop_subregion.stack("Subregion")
+

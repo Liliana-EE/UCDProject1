@@ -1,5 +1,5 @@
 import pandas as pd
-import pandas as pd
+
 
 # 1. Importing using Pandas
 
@@ -33,7 +33,7 @@ import pandas as pd
 
 #2nd attempt:  Merge pop and stores on subregion and county
 # pop= cleandata("Pop_2016.csv")
-# stores = cleandata("Stores.csv")
+# stores = cleandata("Stores_No.csv")
 # hou_cn = cleandata("Housing_vs_Comm_Notices.csv")
 # pop_stores = pd.merge_ordered(pop,stores,on=["subregion","county"],
 #                              fill_method="ffill")
