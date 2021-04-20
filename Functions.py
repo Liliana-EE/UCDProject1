@@ -1,7 +1,6 @@
 # Import pandas as pd
 import pandas as pd
 
-
 # define importdata function
 def importdata(filename):
     data = pd.read_csv(filename)
@@ -23,13 +22,6 @@ def cleandata(filename):
     print(cleaned_data)
     return cleaned_data
 
-importdata("Pop_Demo_2016.csv")
-Pop_Demo = cleandata("Pop_Demo_2016.csv")
-
-importdata("Pop_Demo_2016.csv")
-hou_CN_df = cleandata("Housing_vs_Comm_Notices.csv")
-
-
 # Initialize offset
 offset = -6
 # Code the while loop
@@ -41,5 +33,8 @@ while offset != 0 :
       offset = offset + 1
     print(offset)
 
-
-
+#Get Total commer
+data = importdata("Housing_vs_Comm_Notices.csv")
+for lab, row in data.iterrows():
+    data.loc [lab, "Hous_CN_lengh"] = len(row["Region"])
+print(data)
