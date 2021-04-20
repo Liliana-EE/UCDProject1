@@ -48,3 +48,16 @@ stores = importdata("Stores_No..csv")
 pop_subregion = pivot_table(pop, values=["Population No."], cols=["Subregion"], aggfunc=np.cumsum(), margins=True)
 pop_subregion.stack("Subregion")
 
+import matplotlib.pyplot as plt
+
+# Scatter plot using color
+# Add data: "population", "stores" as x-y, index as color
+ax.scatter(pop_stores["Population"], pop_stores["stores"], c=pop_stores.index)
+
+# Set the x-axis label to "Population"
+ax.set_xlabel("Population")
+# Set the y-axis label to "Stores"
+ax.set_ylabel("Stores")
+
+plt.show()
+
