@@ -1,5 +1,7 @@
 # Import pandas as pd
 import pandas as pd
+import numpy as np
+import matplotlib as plt
 
 # define importdata function
 def importdata(filename):
@@ -33,14 +35,16 @@ while offset != 0 :
       offset = offset + 1
     print(offset)
 
-cleandata("Housing_vs_Comm_Notices.csv")
-cleandata("Stores_list_v2021.csv")
+pop= cleandata("Pop_2016.csv")
+stores = cleandata("Stores.csv")
 
-# Merge the Housing_vs_Comm_Notices and store_list tables and taxi_veh tables
-hou_cn_df = cleandata("Housing_vs_Comm_Notices.csv")
-stores_df = cleandata("Stores_list_v2021.csv")
-hou_cn_stores = hou_cn_df.merge(stores_df, on="County")
-print(hou_cn_stores.head())
+#Merge pop_2016 and stores tables on subregion
+pop_stores = pd.merge_ordered(pop,stores, on="county", left_on="Total Population",
+                              right_on="stores")
 
-# Print the column names of the taxi_own_veh
-print(hou_cn_stores.columns)
+#Add a column named Stores_Opp that
+pop_stores ['Stores_Opp'] = pop_stores['Total Population'] / pop_stores['stores'] - pop_stores['stores']
+
+print(pop_stores)
+
+
