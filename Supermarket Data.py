@@ -32,11 +32,11 @@ def cleandata(filename):
     return cleaned_data
 
 
-#City = data1['City']
-#Gender = data1['Gender']
+City = data1['City']
+Gender = data1['Gender']
 
-#print(City.head())
+print(City.head())
 
 # sort data1 by city, then descending gender
-# data1_cit_gen = data1.sort_values(['City', 'Gender'], ascending=[True, False])
-# print(data1_cit_gen.head())
+data1_cit_gen = data1.sort_values(['City', 'Gender'], ascending=[True, False])
+print(data1_cit_gen.head())

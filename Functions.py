@@ -38,12 +38,14 @@ while offset != 0 :
       offset = offset + 1
     print(offset)
 
+
 #Importing datasets
 pop= importdata("Pop_2016.csv")
 hous_cnot = importdata("Housing_vs_Comm_Notices.csv")
 pop_stores = importdata("pop_stores.csv")
 housing_cnot_date = importdata("Housing_Comm_Notices_1co.csv")
 stores_no = importdata("Stores_No..csv")
+
 
 #Calculate summary stats from pop, stores_No an housing_cnot_date tables
 print(pop.describe())
