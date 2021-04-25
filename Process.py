@@ -92,3 +92,28 @@ import pandas as pd
 
 #df = pd.DataFrame({"Total Population"})
 
+#Attempt#
+#Create a DataFrame from csv file
+#housing_cnot_date = importdata("Housing_Comm_Notices_1co.csv")
+#PCT_Change_C.Notices = housing_cnot_date["PCT_Change C.Notices"]
+
+# Create line plot
+#g = sns.lineplot(x="date", y="PCT_Change_C.Notices",
+#                 data=housing_cnot_date,
+#                 hue="origin")
+
+# Add a title "Average MPG Over Time"
+#g.set_title("Growth Rate of Commencement Notices")
+
+# Show plot
+#plt.show()
+
+#Attempt#
+#ax.scatter(c_notices["No. of households"], pop_stores["Stores"], c=pop_stores.index)
+
+# Set the x-axis label to "Population"
+#ax.set_xlabel("Population")
+# Set the y-axis label to "Stores"
+#ax.set_ylabel("Stores")
+
+#plt.show()
