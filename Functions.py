@@ -41,6 +41,7 @@ while offset != 0 :
 
 #Importing datasets
 pop= importdata("Pop_2016.csv")
+stores = importdata("Stores_1co.csv")
 hous_cnot = importdata("Housing_vs_Comm_Notices.csv")
 pop_stores = importdata("pop_stores.csv")
 housing_cnot_date = importdata("Housing_Comm_Notices_1co.csv")
@@ -51,6 +52,11 @@ stores_no = importdata("Stores_No..csv")
 print(pop.describe())
 print(stores_no.describe())
 print(housing_cnot_date.describe())
+
+
+# Merge the stores and pop tables on the subregion column
+stores_pop = pd.merge_ordered(pop,stores, on="Subregion", fill_method="ffill")
+print("stores_pop table shape", stores_pop.shape)
 
 
 #Making a count plot with a list
